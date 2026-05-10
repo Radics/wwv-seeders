@@ -15,27 +15,6 @@ importers:
         specifier: ^5.4.5
         version: 5.9.3
 
-  packages/aviation:
-    dependencies:
-      '@sentry/node':
-        specifier: ^8.55.2
-        version: 8.55.2
-      '@wwv-seeders/shared':
-        specifier: workspace:*
-        version: link:../shared
-      node-cron:
-        specifier: ^3.0.3
-        version: 3.0.3
-      undici:
-        specifier: ^6.19.2
-        version: 6.25.0
-      ws:
-        specifier: ^8.18.0
-        version: 8.20.0
-      zod:
-        specifier: ^3.23.8
-        version: 3.25.76
-
   packages/civilUnrest:
     dependencies:
       '@sentry/node':
@@ -163,27 +142,6 @@ importers:
         version: 3.25.76
 
   packages/iss:
-    dependencies:
-      '@sentry/node':
-        specifier: ^8.55.2
-        version: 8.55.2
-      '@wwv-seeders/shared':
-        specifier: workspace:*
-        version: link:../shared
-      node-cron:
-        specifier: ^3.0.3
-        version: 3.0.3
-      undici:
-        specifier: ^6.19.2
-        version: 6.25.0
-      ws:
-        specifier: ^8.18.0
-        version: 8.20.0
-      zod:
-        specifier: ^3.23.8
-        version: 3.25.76
-
-  packages/maritime:
     dependencies:
       '@sentry/node':
         specifier: ^8.55.2
