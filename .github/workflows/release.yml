@@ -40,6 +40,7 @@ jobs:
             if [ -d "$dir/dist" ] && [ "$dir" != "shared/" ]; then
               mkdir -p "../staging/$dir/dist"
               cp "$dir/dist/index.mjs" "../staging/$dir/dist/"
+              cp "$dir/package.json" "../staging/$dir/"
             fi
           done
           cd ../staging
