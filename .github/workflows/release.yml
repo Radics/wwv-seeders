@@ -1,0 +1,54 @@
+name: Build and Release Seeders
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Build seeders
+        run: pnpm run build
+        
+      - name: Package seeders
+        run: |
+          mkdir -p staging
+          cd packages
+          for dir in */; do
+            # Skip shared packages or those without dist
+            if [ -d "$dir/dist" ] && [ "$dir" != "shared/" ]; then
+              mkdir -p "../staging/$dir/dist"
+              cp "$dir/dist/index.mjs" "../staging/$dir/dist/"
+            fi
+          done
+          cd ../staging
+          zip -r ../seeders.zip .
+          
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: seeders.zip
+          tag_name: "v1.0.${{ github.run_number }}"
+          name: "Community Seeders v1.0.${{ github.run_number }}"
+          generate_release_notes: true
