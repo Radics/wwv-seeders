@@ -53,3 +53,7 @@ jobs:
           tag_name: "v1.0.${{ github.run_number }}"
           name: "Community Seeders v1.0.${{ github.run_number }}"
           generate_release_notes: true
+
+      - name: Trigger Coolify Webhook
+        run: |
+          curl -sS -X POST "${{ secrets.COOLIFY_WEBHOOK_URL }}"
