@@ -2,6 +2,7 @@
 import { setLiveSnapshot } from '@wwv-seeders/shared';
 import { withRetry, fetchWithTimeout, CHROME_UA } from '@wwv-seeders/shared';
 import * as Sentry from '@sentry/node';
+import * as satellite from 'satellite.js';
 
 const BASE_URL = "https://celestrak.org/NORAD/elements/gp.php";
 const PROXY_WORKER_URL = "https://wwv-proxy.titmitna.workers.dev/?url=";
@@ -76,7 +77,6 @@ async function refreshAllTLEs() {
 
 // Exported standard propagation function
 export function propagateAll(records: CelesTrakGP[], time: Date, group: string): any[] {
-    const satellite = require('satellite.js');
     const gmst = satellite.gstime(time);
     const results: any[] = [];
 
