@@ -5,6 +5,10 @@ import { db } from '@wwv-seeders/shared';
 import { setLiveSnapshot } from '@wwv-seeders/shared';
 import { fetchWithTimeout, withRetry } from '@wwv-seeders/shared';
 import * as Sentry from '@sentry/node';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Zod Schema for input validation to strip unrecognized injection keys
 const itemSchema = z.object({
