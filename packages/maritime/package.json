@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/seeder.mjs",
   "scripts": {
-    "build": "tsup src/index.ts --format esm --clean --outDir dist"
+    "build": "tsup"
   },
   "dependencies": {
     "@sentry/node": "^8.55.2",

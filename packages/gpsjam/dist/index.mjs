@@ -252,7 +252,7 @@ async function seedGpsJam() {
     }
   })();
   console.log(`[GPS Jamming] Generated ${items.length} points. Saved ${insertedCount} to SQLite.`);
-  await setLiveSnapshot("gps-jamming", {
+  await setLiveSnapshot("gpsjam", {
     source: "gpsjam_mock",
     fetchedAt: (/* @__PURE__ */ new Date()).toISOString(),
     items,
@@ -260,7 +260,7 @@ async function seedGpsJam() {
   }, 86400);
 }
 var index_default = {
-  name: "gps-jamming",
+  name: "gpsjam",
   cron: "0 0 * * *",
   // Once daily at midnight
   fn: seedGpsJam

@@ -1,10 +1,3 @@
-var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
-  get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
-}) : x)(function(x) {
-  if (typeof require !== "undefined") return require.apply(this, arguments);
-  throw Error('Dynamic require of "' + x + '" is not supported');
-});
-
 // ../shared/db.ts
 import Database from "better-sqlite3";
 import path from "path";
@@ -237,6 +230,7 @@ import geoip from "geoip-lite";
 
 // src/index.ts
 import * as Sentry from "@sentry/node";
+import * as satellite from "satellite.js";
 var BASE_URL = "https://celestrak.org/NORAD/elements/gp.php";
 var PROXY_WORKER_URL = "https://wwv-proxy.titmitna.workers.dev/?url=";
 var DEFAULT_GROUPS = [
@@ -295,7 +289,6 @@ async function refreshAllTLEs() {
   }
 }
 function propagateAll(records, time, group) {
-  const satellite = __require("satellite.js");
   const gmst = satellite.gstime(time);
   const results = [];
   for (const rec of records) {

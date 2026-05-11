@@ -33,8 +33,8 @@ redis.on('ready', () => {
   console.log('[Redis] Connected and ready.');
 });
 
-import { broadcastPluginData } from './websocket';
-
+// broadcastPluginData is provided by the wwv-data-engine runner globally
+// to avoid bundling websockets into the seeders
 const lastSnapshotTimes = new Map<string, number>();
 const SNAPSHOT_THROTTLE_MS = 5 * 60 * 1000; // 5 minutes
 
@@ -46,7 +46,9 @@ export async function setLiveSnapshot(source: string, payload: any, ttlSeconds: 
   try {
     // 1. ALWAYS broadcast newly updated entities to any active WebSocket subscribers
     // The data pipeline relies on this for high-frequency HUD updates.
-    broadcastPluginData(source, payload);
+    if (typeof (globalThis as any).broadcastPluginData === 'function') {
+      (globalThis as any).broadcastPluginData(source, payload);
+    }
 
     // 2. Throttle Redis snapshots to prevent blowing past 500K max request limits (e.g. Upstash)
     const now = Date.now();

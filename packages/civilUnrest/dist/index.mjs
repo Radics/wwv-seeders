@@ -320,7 +320,7 @@ async function seedCivilUnrest() {
   }
   console.log(`[CivilUnrest] Clustered ${features.length} mentions into ${items.length} confirmed unrest events.`);
   await setLiveSnapshot(
-    "civil_unrest",
+    "civilUnrest",
     {
       source: "gdelt",
       fetchedAt: (/* @__PURE__ */ new Date()).toISOString(),

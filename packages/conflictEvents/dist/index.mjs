@@ -297,7 +297,7 @@ async function fetchConflictEvents() {
         notes: e.notes
       }
     }));
-    await setLiveSnapshot("conflict_events", geoEntities, 3600 * 24);
+    await setLiveSnapshot("conflictEvents", geoEntities, 3600 * 24);
   } catch (err) {
     console.warn("[Seeder: ConflictEvents] Redis cache failed:", err);
     Sentry.captureException(err, { extra: { context: "conflictEvents_redis" } });
