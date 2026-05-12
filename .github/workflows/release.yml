@@ -56,6 +56,8 @@ jobs:
           name: "Community Seeders v1.0.${{ github.run_number }}"
           generate_release_notes: true
 
-      - name: Trigger Coolify Webhook
+      - name: Trigger Coolify API Service Restart
         run: |
-          curl -sS -X POST "${{ secrets.COOLIFY_WEBHOOK_URL }}"
+          curl -sS -X POST "http://192.168.68.69:8000/api/v1/services/nuyr2d8gsfdhdzhbhk1ift1g/restart" \
+            -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \
+            -H "Content-Type: application/json"
