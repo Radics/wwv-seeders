@@ -1,6 +1,6 @@
 // Dynamic import required by cjs/esm interop
-import { setLiveSnapshot } from '@wwv-seeders/shared';
-import { withRetry, fetchWithTimeout, CHROME_UA } from '@wwv-seeders/shared';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
+import { withRetry, fetchWithTimeout, CHROME_UA } from '@worldwideview/seeder-sdk';
 import * as Sentry from '@sentry/node';
 import * as satellite from 'satellite.js';
 

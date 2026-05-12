@@ -1,5 +1,5 @@
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
 import * as Sentry from '@sentry/node';
 
 const ADSB_LOL_URL = "https://api.adsb.lol/v2/mil";

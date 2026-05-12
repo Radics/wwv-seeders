@@ -1,10 +1,10 @@
-import Database from 'better-sqlite3';
+import Database, { type Database as BetterSqlite3Database } from 'better-sqlite3';
 import path from 'path';
 
 // Define the path for the SQLite database. Note Docker volume mounts to /app/packages/wwv-data-engine/data
 const dbPath = process.env.DB_PATH || path.join(process.cwd(), 'data', 'engine.db');
 
-export const db = new Database(dbPath, {
+export const db: BetterSqlite3Database = new Database(dbPath, {
   // Use verbose logging if needed for debugging
   // verbose: console.log
 });

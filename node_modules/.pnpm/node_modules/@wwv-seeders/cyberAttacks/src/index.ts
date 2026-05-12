@@ -1,8 +1,8 @@
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
-import { fetchWithTimeout, withRetry } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
+import { fetchWithTimeout, withRetry } from '@worldwideview/seeder-sdk';
 
-import { geolocateIp } from '@wwv-seeders/shared';
+import { geolocateIp } from '@worldwideview/seeder-sdk';
 
 const OTX_BASE = 'https://otx.alienvault.com/api/v1';
 

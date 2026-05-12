@@ -1,4 +1,4 @@
-import { setLiveSnapshot } from '@wwv-seeders/shared';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
 import * as Sentry from '@sentry/node';
 
 const WTIA_API_URL = "https://api.wheretheiss.at/v1/satellites/25544";

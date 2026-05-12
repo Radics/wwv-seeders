@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { z } from 'zod';
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
-import { fetchWithTimeout, withRetry } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
+import { fetchWithTimeout, withRetry } from '@worldwideview/seeder-sdk';
 import * as Sentry from '@sentry/node';
 import { fileURLToPath } from 'url';
 

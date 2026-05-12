@@ -1,4 +1,5 @@
-import Redis from 'ioredis';
+// @ts-ignore
+import { Redis } from 'ioredis';
 import dotenv from 'dotenv';
 import path from 'path';
 import zlib from 'zlib';
@@ -15,16 +16,16 @@ if (redisUrl.includes('upstash.io') && redisUrl.startsWith('redis://')) {
 
 console.log(`[Redis] Connecting to ${redisUrl.replace(/:[^:@]+@/, ':***@')} ...`);
 
-export const redis = new Redis(redisUrl, {
+export const redis: Redis = new Redis(redisUrl, {
   // Common reconnect strategy
-  retryStrategy(times) {
+  retryStrategy(times: number) {
     const delay = Math.min(times * 50, 2000);
     return delay;
   },
   maxRetriesPerRequest: 3,
 });
 
-redis.on('error', (err) => {
+redis.on('error', (err: any) => {
   console.error('[Redis] Connection Error against URL:', redisUrl.replace(/:[^:@]+@/, ':***@'));
   console.error('[Redis] Error Object:', err);
 });

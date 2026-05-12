@@ -1,5 +1,5 @@
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
 import crypto from 'crypto';
 import * as Sentry from '@sentry/node';
 

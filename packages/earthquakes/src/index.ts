@@ -1,6 +1,6 @@
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
-import { fetchWithTimeout, withRetry, haversineKm } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
+import { fetchWithTimeout, withRetry, haversineKm } from '@worldwideview/seeder-sdk';
 
 const KNOWN_TEST_SITES = [
   { name: 'Punggye-ri (North Korea)', lat: 41.278, lon: 129.088 },

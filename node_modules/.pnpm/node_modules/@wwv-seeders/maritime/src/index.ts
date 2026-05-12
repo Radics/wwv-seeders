@@ -1,6 +1,6 @@
 import WebSocket from 'ws';
-import { db } from '@wwv-seeders/shared';
-import { redis, setLiveSnapshot } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { redis, setLiveSnapshot } from '@worldwideview/seeder-sdk';
 import * as Sentry from '@sentry/node';
 
 const AISSTREAM_URL = 'wss://stream.aisstream.io/v0/stream';

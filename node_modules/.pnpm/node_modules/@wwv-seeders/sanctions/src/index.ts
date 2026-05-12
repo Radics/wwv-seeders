@@ -1,6 +1,6 @@
 import sax from 'sax';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
-import { fetchWithTimeout, CHROME_UA } from '@wwv-seeders/shared';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
+import { fetchWithTimeout, CHROME_UA } from '@worldwideview/seeder-sdk';
 import * as Sentry from '@sentry/node';
 
 const OFAC_SOURCES = [

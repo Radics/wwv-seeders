@@ -1,6 +1,6 @@
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
-import { fetchWithTimeout, withRetry } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
+import { fetchWithTimeout, withRetry } from '@worldwideview/seeder-sdk';
 
 interface FIRMSRecord {
   latitude: number;

@@ -1,6 +1,6 @@
 import cron from 'node-cron';
-import { db } from '@wwv-seeders/shared';
-import { redis, setLiveSnapshot } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { redis, setLiveSnapshot } from '@worldwideview/seeder-sdk';
 
 import * as Sentry from '@sentry/node';
 import { fetch } from 'undici';

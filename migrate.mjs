@@ -11,7 +11,7 @@ if (!fs.existsSync(NEW_PACKAGES)) fs.mkdirSync(NEW_PACKAGES, { recursive: true }
 const sharedDir = path.join(NEW_PACKAGES, 'shared');
 fs.mkdirSync(sharedDir, { recursive: true });
 fs.writeFileSync(path.join(sharedDir, 'package.json'), JSON.stringify({
-  name: "@wwv-seeders/shared",
+  name: "@worldwideview/seeder-sdk",
   version: "1.0.0",
   main: "index.ts",
   dependencies: {
@@ -55,7 +55,7 @@ for (const file of files) {
       "build": "tsup src/index.ts --format esm --clean --outDir dist"
     },
     dependencies: {
-      "@wwv-seeders/shared": "workspace:*",
+      "@worldwideview/seeder-sdk": "workspace:*",
       "node-cron": "^3.0.3",
       "undici": "^6.19.2",
       "ws": "^8.18.0",
@@ -67,10 +67,10 @@ for (const file of files) {
   let code = fs.readFileSync(path.join(SEEDERS_DIR, file), 'utf8');
   
   // Replace relative imports with shared package
-  code = code.replace(/from '\.\.\/db'/g, "from '@wwv-seeders/shared'");
-  code = code.replace(/from '\.\.\/redis'/g, "from '@wwv-seeders/shared'");
-  code = code.replace(/from '\.\.\/seed-utils'/g, "from '@wwv-seeders/shared'");
-  code = code.replace(/from '\.\.\/geoip'/g, "from '@wwv-seeders/shared'");
+  code = code.replace(/from '\.\.\/db'/g, "from '@worldwideview/seeder-sdk'");
+  code = code.replace(/from '\.\.\/redis'/g, "from '@worldwideview/seeder-sdk'");
+  code = code.replace(/from '\.\.\/seed-utils'/g, "from '@worldwideview/seeder-sdk'");
+  code = code.replace(/from '\.\.\/geoip'/g, "from '@worldwideview/seeder-sdk'");
   code = code.replace(/import \{ registerSeeder \} from '\.\.\/scheduler';\n?/g, "");
   
   // Replace registerSeeder with export default

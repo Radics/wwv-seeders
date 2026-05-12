@@ -1,4 +1,4 @@
-import { setLiveSnapshot } from '@wwv-seeders/shared';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
 
 const NZTA_API_URL = "https://trafficnz.info/service/traffic/rest/4/cameras/all";
 

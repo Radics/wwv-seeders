@@ -1,5 +1,5 @@
-import { db } from '@wwv-seeders/shared';
-import { setLiveSnapshot } from '@wwv-seeders/shared';
+import { db } from '@worldwideview/seeder-sdk';
+import { setLiveSnapshot } from '@worldwideview/seeder-sdk';
 import { randomUUID } from 'crypto';
 
 const insertGpsJam = db.prepare('INSERT OR REPLACE INTO gps_jamming (id, payload, source_ts, fetched_at) VALUES (@id, @payload, @source_ts, @fetched_at)');
