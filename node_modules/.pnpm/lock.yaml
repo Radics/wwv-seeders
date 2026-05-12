@@ -21,8 +21,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -42,8 +42,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -63,8 +63,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -84,8 +84,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -105,8 +105,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -126,8 +126,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -147,8 +147,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -168,8 +168,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -189,8 +189,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -210,8 +210,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -231,8 +231,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -252,8 +252,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -276,8 +276,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -337,8 +337,8 @@ importers:
         specifier: ^8.55.2
         version: 8.55.2
       '@worldwideview/seeder-sdk':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0
       node-cron:
         specifier: ^3.0.3
         version: 3.0.3
@@ -939,6 +939,9 @@ packages:
 
   '@types/tedious@4.0.14':
     resolution: {integrity: sha512-KHPsfX/FoVbUGbyYvk1q9MMQHLPeRZhRJZdO45Q4YjvFkv4hMNghCWTvy7rdKessBsmtz4euWCWAB6/tVpI1Iw==}
+
+  '@worldwideview/seeder-sdk@1.0.0':
+    resolution: {integrity: sha512-8doeAL0WqTF8WivIPf0JunJ008To7Kf6zrdcSoVkW2d+1vvnOYVdJpCFt03/XcQk2R18v61hzdG+nAN9+CZhHg==}
 
   acorn-import-attributes@1.9.5:
     resolution: {integrity: sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==}
@@ -2051,6 +2054,18 @@ snapshots:
   '@types/tedious@4.0.14':
     dependencies:
       '@types/node': 25.7.0
+
+  '@worldwideview/seeder-sdk@1.0.0':
+    dependencies:
+      '@sentry/node': 8.55.2
+      better-sqlite3: 11.10.0
+      dotenv: 17.4.2
+      geoip-lite: 2.0.2
+      ioredis: 5.10.1
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
 
   acorn-import-attributes@1.9.5(acorn@8.16.0):
     dependencies:
